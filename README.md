@@ -7,7 +7,7 @@
 
 ## Highlight features for module
 - <h3>You can add the login step on the checkout page.</h3>
- <img alt="Settings" src="docs/img/login-step.png" width="60%">
+ <img alt="Settings" src="docs/img/login-step.png" width="80%">
 
 ## How to install module?
 
