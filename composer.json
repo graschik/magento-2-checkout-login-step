@@ -1,0 +1,20 @@
+{
+    "name": "grasch/module-checkout-login-step",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "php": "~7.4.0",
+        "magento/framework": "103.0.*"
+    },
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Grasch\\CheckoutLoginStep\\": ""
+        }
+    }
+}

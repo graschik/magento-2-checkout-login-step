@@ -1,0 +1,50 @@
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .opc-wrapper {
+        #login {
+            .block-proceed-without-login {
+                float: right;
+                clear: none;
+            }
+
+            .form-login {
+                border-bottom: none;
+                margin: 0;
+                padding-bottom: 0;
+            }
+
+            .block-proceed-without-login {
+                .actions-toolbar {
+                    margin-top: 25px;
+                }
+            }
+
+            .block-customer-login {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    #checkout.login-step-active {
+        .opc-wrapper {
+            width: 100%;
+        }
+        .opc-block-summary {
+            display: none;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .opc-wrapper {
+        #login {
+            .block-proceed-without-login {
+                float: none;
+                clear: both;
+            }
+
+            .form-login {
+                padding-bottom: 0;
+            }
+        }
+    }
+}

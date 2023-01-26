@@ -1,0 +1,60 @@
+<div class="block block-customer-login">
+    <div class="block-title">
+        <strong id="block-customer-login-heading" role="heading" aria-level="2" data-bind="i18n: 'Registered Customers'"/>
+    </div>
+    <form class="form form-login" data-role="email-with-login"
+          data-bind="submit:login"
+          method="post">
+        <fieldset id="customer-email-fieldset" class="fieldset" data-bind="blockLoader: isLoading">
+            <div class="field" data-bind="i18n: 'If you have an account, sign in with your email address.'"/>
+            <div class="field required">
+                <label class="label" for="customer-email">
+                    <span data-bind="i18n: 'Email Address'"></span>
+                </label>
+                <div class="control">
+                    <input class="input-text"
+                           type="email"
+                           data-bind="
+                                textInput: email,
+                                hasFocus: emailFocused"
+                           name="username"
+                           data-validate="{required:true, 'validate-email':true}"
+                           id="customer-email" />
+                </div>
+            </div>
+
+            <!--Hidden fields -->
+            <fieldset class="fieldset hidden-fields">
+                <div class="field required">
+                    <label class="label" for="customer-password">
+                        <span data-bind="i18n: 'Password'"></span>
+                    </label>
+                    <div class="control">
+                        <input class="input-text"
+                               type="password"
+                               name="password"
+                               id="customer-password"
+                               data-validate="{required:true}" autocomplete="off"/>
+                    </div>
+
+                </div>
+                <!-- ko foreach: getRegion('additional-login-form-fields') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+                <!-- /ko -->
+                <div class="actions-toolbar">
+                    <input name="context" type="hidden" value="checkout" />
+                    <div class="primary">
+                        <button type="submit" class="action login primary" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
+                    </div>
+                    <div class="secondary">
+                        <a class="action remind" data-bind="attr: { href: forgotPasswordUrl }">
+                            <span data-bind="i18n: 'Forgot Your Password?'"></span>
+                        </a>
+                    </div>
+                </div>
+            </fieldset>
+            <!--Hidden fields -->
+        </fieldset>
+    </form>
+</div>
+<!-- /ko -->
